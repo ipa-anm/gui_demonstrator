@@ -10,6 +10,9 @@ color_choices = ["blue", "yellow", "red", "green"]
 color = ["black"]+random.choices(color_choices, k=number_child_nodes-1)
 color_names = [c +  "<br>pick" for c in color]
 
+
+for i in range (2,len(color)): 
+    color[i] = "grey"; 
 def make_annotations(pos, text, M, font_size=20, font_color='rgb(250,250,250)'):
     L=len(pos)
     print(pos)
@@ -71,6 +74,7 @@ def create_tree():
                     y=Yn,
                     mode='markers',
                     name='bla',
+                    opacity=1.0,
                     marker=dict(symbol='square',
                                     size=size,
                                     color=color,

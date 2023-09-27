@@ -9,7 +9,6 @@ data = Path('share') / package_name
 setup(
     name=package_name,
     version=package_xml.find('version').text,
-    packages=[package_name],
     maintainer=package_xml.find('license').text,
     maintainer_email=package_xml.find('maintainer').attrib['email'],
     license=package_xml.find('license').text,
@@ -21,7 +20,7 @@ setup(
     zip_safe=True,
     entry_points={
         'console_scripts': [
-            'nicegui_node = gui.node:main',
+            'demonstrator = gui_demonstrator.node:main',
         ],
     },
 )
